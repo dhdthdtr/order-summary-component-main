@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Red-hat: 'Red Hat Display', sans-serif;
+$white: #ffffff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $Red-hat;
+}
+
+// main
+main{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $Pale-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // order box
+    #order-box{
+        max-width: 33%;
+        height: auto;
+        background-color: $white;
+        border-radius: 20px;
+        text-align: center;
+    
+        // order img
+        #order-img{
+            img{
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+    
+        // order info
+        #order-info{
+            padding: 20px;
+        
+            // order title
+            #order-title{
+                font-weight: 900;
+                margin-bottom: 20px;
+            }
+        
+            // order subtitle
+            #order-subtitle{
+                opacity: 0.6;
+                width: 70%;
+                margin: 0 auto;
+                letter-spacing: 0.7px;
+                margin-bottom: 20px;
+            }
+
+            // order price
+            #order-price{
+                background-color: $Very-pale-blue;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                margin: 0 auto;
+                border-radius: 7px;
+                margin-bottom: 20px;
+
+                //order plan
+                #order-plan{
+                    display: flex;
+                    align-items: center;
+
+                    #order-plan-info{
+                        margin-left: 15px;
+
+                        #order-plan-name{
+                            font-weight: 700;
+                        }
+
+                        #order-plan-price{
+                            opacity: 0.6;
+                        }
+                    }
+                }
+
+                a{
+                    font-weight: 700;
+                    color: $Bright-blue;
+                    transition: .3s;
+                }
+
+                a:visited{
+                    color: $Bright-blue;
+                }
+
+                a:hover{
+                    color: $Desaturated-blue;
+                    cursor: pointer;
+                }
+            }
+
+            #order-submit{
+                box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px!important;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                border: none;
+                background-color: $Bright-blue;
+                color: white;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 15px;
+                letter-spacing: 0.7px;
+                margin-bottom: 20px;
+                transition: .3s;
+            }
+
+            #order-submit:hover{
+                cursor: pointer;
+                background-color: $Desaturated-blue;
+            }
+
+            #order-cancel{
+                font-size: 15px;
+                font-weight: 700;
+                opacity: 0.6;
+                width: max-content;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                transition: .3s;
+            }
+
+            #order-cancel:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (width <= 375px) {
+        #order-box{
+            max-width: 90%;
+
+            #order-info{
+                #order-title{
+                    font-size: 25px;
+                }
+
+                #order-subtitle{
+                    font-size: 14px;
+                    width: 100%;
+                }
+
+                #order-price{
+                    width: 100%;
+
+                    #order-plan{
+                        #order-plan-name{
+                            font-size: 14px;
+                        }
+
+                        #order-plan-price{
+                            font-size: 14px;
+                        }
+                    }
+
+                    a{
+                        font-size: 14px;
+                    }
+                }
+
+                #order-submit{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
