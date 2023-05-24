@@ -138,4 +138,8 @@ main #order-box #order-info #order-cancel:hover {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+.attribution {
+  background-color: hsl(225, 100%, 94%);
+}
+
+/*# sourceMappingURL=styles.css.map */
