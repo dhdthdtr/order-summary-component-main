@@ -19,7 +19,7 @@ main {
 }
 main #order-box {
   max-width: 33%;
-  height: auto;
+  height: 100%;
   background-color: #ffffff;
   border-radius: 20px;
   text-align: center;
@@ -138,4 +138,4 @@ main #order-box #order-info #order-cancel:hover {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */
